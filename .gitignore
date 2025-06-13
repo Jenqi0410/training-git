@@ -1,0 +1,13 @@
+# Loại bỏ file hệ điều hành
+.DS_Store
+Thumbs.db
+
+# Loại bỏ thư mục build
+dist/
+build/
+
+# Loại bỏ các tệp của Node
+node_modules/
+
+# Loại bỏ file môi trường
+.env

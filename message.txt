@@ -1,1 +1,1 @@
-Dòng này t? branch B
+Dòng này t? branch A và B dã du?c h?p nh?t

@@ -1,0 +1,29 @@
+name: React CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🔄 Checkout mã nguồn
+        uses: actions/checkout@v3
+
+      - name: ⚙️ Cài Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: 📦 Cài thư viện (npm install)
+        run: npm install
+
+      - name: ✅ Chạy kiểm tra (npm test)
+        run: npm test -- --watchAll=false
+
+      - name: 🛠️ Build project (npm run build)
+        run: npm run build
